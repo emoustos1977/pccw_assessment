@@ -1,4 +1,4 @@
-ipackage org.example.pages;
+package org.example.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,14 +28,14 @@ public class LoginPage {
     }
 
     public void verifyWrongUsername() {
-        String expectedTest = "Your username is invalid!";
+        String expectedText = "Your username is invalid!";
         String actualText = driver.findElement(errorMessage).getText();
-        Assert.assertEquals(actualText, expectedTest);
+        Assert.assertEquals(actualText, expectedText);
     }
 
     public void verifyWrongPassword() {
-        String expectedTest = "Your password is invalid!";
+        String expectedText = "Your password is invalid!";
         String actualText = driver.findElement(errorMessage).getText();
-        Assert.assertEquals(actualText, expectedTest);
+        Assert.assertEquals(actualText, expectedText);
     }
 }
